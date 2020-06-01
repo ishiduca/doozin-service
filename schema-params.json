@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "category": {
+      "type": "string",
+      "required": true,
+      "enum": [
+        "mak",
+        "act",
+        "nam",
+        "mch",
+        "gnr",
+        "kyw",
+        "com"
+      ]
+    },
+    "value": {
+      "type": "string",
+      "required": true,
+      "pattern": "^.+$"
+    },
+    "opts": {
+      "type": [ "null", "object" ]
+    }
+  }
+}

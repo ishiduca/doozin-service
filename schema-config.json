@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "urlencode": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "charset": {
+          "type": "string",
+          "required": true,
+          "enum": [ "utf8" ]
+        }
+      }
+    },
+    "backoff": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "failAfter": {
+          "type": "integer",
+          "required": true
+        }
+      }
+    },
+    "hyperquest": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "method": {
+          "required": true,
+          "enum": [ "GET", "POST" ]
+        },
+        "headers": {
+          "type": "object",
+          "required": true,
+          "properties": {
+            "user-agent": {
+              "type": "string",
+              "required": true
+            }
+          }
+        },
+        "origin": {
+          "type": [ "null", "string" ],
+          "required": true
+        },
+        "searchHome": {
+          "type": [ "null", "string" ],
+          "required": true
+        }
+      }
+    }
+  }
+}
